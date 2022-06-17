@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    public function Tags()
+    {
+        return $this->hasManyThrough(Tag::class,ProductTag::class,'product_id','tag_id');
+    }
+
 }
