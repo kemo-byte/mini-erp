@@ -13,5 +13,6 @@ class Product extends Model
     {
         return $this->hasManyThrough(Tag::class,ProductTag::class,'product_id','tag_id');
     }
+    
 
 }
